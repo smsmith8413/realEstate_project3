@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+		<title>Generic - Introspect by TEMPLATED</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/css/main.css" />
+
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+          <a href="/" class="logo">Home</a>
+          <nav id="nav">
+            <a href="process">Process Flow</a>
+            <a href="data">Data Details</a>						
+            <a href="machine">Machine Learning</a>
+            <a href="tableau">Tableau</a>
+            <a href="calculator">Price Prediction</a>
+					</nav>
+					
+				</div>
+			</header>
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+    <!-- Required meta tags -->
+    <!-- <meta charset="utf-8">-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <!-- <title>Housing Prices!</title> -->
+  </head>
+  <body>
+    <!--Navigation Bar-->  
+    <!-- <nav class="navbar" style="background-color: #9e9992;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">DS Housing</a>
+            <img src="/house-clip.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+        </nav>
+    </nav>
+
+    <br> -->
+    
+    <!--Jumbotron with Pic-->
+    <!-- <div class="jumbotron JumboHeaderImg jumbotron-fluid text-center text-bold">
+        <div class="container">
+          <h1 class="display-4 text-bold bg-light">KNOW YOUR ODDS</h1>
+          <p class="lead text-bold bg-light">DS housing is here to better your market reach.</p>
+        </div>
+    </div>
+    <script type='text/javascript' src='https://prod-useast-a.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1016px; height: 991px;'><object class='tableauViz' width='1016' height='991' style='display:none;'><param name='host_url' value='https%3A%2F%2Fprod-useast-a.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;smuproject3team5' /><param name='name' value='Project_3_Team_5&#47;Story1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='workbookUpload' value='web' /><param name='showAppBanner' value='false' /></object></div> -->
+    <!--Prediction with flask deployment-->
+  <!-- <section id="calcPage"> -->
+    <section id="calcTop">
+    <div class="inner">
+      <br></br>
+    <blockquote class="blockquote">
+      <p class="mb-0">Real estate cannot be lost or stolen, nor can it be carried away. Purchased with common sense, paid for in full, and managed with reasonable care, it is about the safest investment in the world.</p>
+      <footer class="blockquote-footer">Franklin D. Roosevelt <cite title="Source Title"></cite></footer>
+    </blockquote>
+    </div>
+    </section>
+
+    <section id="calcMiddle">
+      <div class="login">
+      <h1>Predict House Selling Price</h1>
+             <!-- Form to enter new data for predictions  -->
+        <form action='/calculator_predictor' method="POST">
+          <p>Please enter a postal code (....)</p>
+          <input type="text" name="PostalCode" placeholder="Postal Code" required="required" /><br>
+          <input type="text" name="BathsTotal" placeholder="Total Baths" required="required" /><br>
+          <input type="text" name="BedsTotal" placeholder="Total Beds" required="required" /><br>
+          <input type="text" name="DOM" placeholder="Expected Days On Market" required="required" /><br>
+          <input type="text" name="NumberOfDiningAreas" placeholder="Number Of Dining Areas" required="required" /><br>
+          <input type="text" name="NumberOfLivingAreas" placeholder="Number Of Living Areas" required="required" /><br>
+          <input type="text" name="NumberOfStories" placeholder="Number Of Stories" required="required" /><br>
+          <input type="text" name="OriginalListPrice" placeholder="Original List Price" required="required" /><br>
+          <input type="text" name="ParkingSpacesGarage" placeholder="# of Garage Parking" required="required" /><br>
+          <input type="text" name="PoolYN" placeholder="PoolYN" required="required" /><br>
+          <input type="text" name="SqFtTotal" placeholder="Sq Ft Total" required="required" /><br>
+          <input type="text" name="YearBuilt" placeholder="Year Built" required="required" /><br>
+    
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    
+       <br></br>
+       <h2>{{blah.PostalCode}}</h2>
+       <h2>{{pred}}</h2>
+       
+       <br>
+      </div>
+      <!-- </div> -->
+    <!-- </section> -->
+    <!--Quote Just To Make It Fancy-->
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
