@@ -40,7 +40,7 @@
                             Below we are providing code snippets concerning all the data cleansing that we completed prior to puttting
                             the data to Machine Learning.  
                         </p>
-						<p>The following Dependiences were utilized in the Pandas workbook.</p>
+						<p><b>The following Dependiences were utilized in the Pandas workbook.</b></p>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/1-pandas-dependencies.jpg" alt="" />
 						</div>
@@ -48,110 +48,118 @@
                         <div class="image fit">
 							<img src="../static/images/pandas_images/2-pandas-base-file-load.jpg" alt="" />
 						</div>
-                        <p>Excluded columns to only those with the highest potential utilization leaving 38 columns using .iloc.</p>
+                        <p><b>Excluded columns to only those with the highest potential utilization leaving 38 columns using .iloc.</b></p>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/3-reduce-columns.jpg" alt="" />
 						</div> 
-                        <p>Further reduced the file to be inclusive of only Collin County Postal Codes as the there were many records that had incorrect Postal Codes outside of Collin County.
+                        <p><b>Further reduced the file to be inclusive of only Collin County Postal Codes as the there were many records that had incorrect Postal Codes outside of Collin County.
                              We also reduced the number of Collin County cities to further reduce the file size for this project.  We utilized .isin to complete this cleansing step reducing the 
-                             file to 135,489 rows.</p>
+                             file to 135,489 rows.</b></p>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/4-postal-code-rows.jpg" alt="" />
 						</div>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/5-city-rows.jpg" alt="" />
 						</div>
-                        <p>After the data was cleansed and reduced an additional level of data profiling was initiated to determine all blank(nan) cells.  Below is the code, 
-                            resulting missing ratio table and Bar chart.</p>
+                        <p><b>After the data was cleansed and reduced an additional level of data profiling was initiated to determine all blank(nan) cells.  Below is the code 
+                        and resulting Bar chart.</b></p>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/6-data-profiling-nan-ratio.jpg" alt="" />
 						</div>
-                        <div class="image fit">
+                        <!-- <div class="image fit">
 							<img src="../static/images/pandas_images/7-missing-ratio-table.jpg" alt="" />
-						</div>
-                        <div class="image fit">
+						</div> -->
+                        <div class="image">
 							<img src="../static/images/pandas_images/8-missing-ratio-bar.jpg" alt="" />
 						</div>
-                        <div class="image fit">
+                        <div class="image">
 							<img src="../static/images/pandas_images/9-column-record-counts.jpg" alt="" />
 						</div>
-                        <p>Additional data profiling was run via ProfileReport and missing numeric cells were populated using interpolate function
-                           with string cells being populated with .fillna or .replace functions.</p>
+                        <p><b>Additional data profiling was run via ProfileReport and missing numeric cells were populated using interpolate function
+                           with string cells being populated with .fillna or .replace functions.</b></p>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/10-data-profile.jpg" alt="" />
                         </div>
 						    <ul class="actions">
-							    <li><a href="Collin_County_RE_Data_Analysis-Before.html" class="button alt">Data Profile Before Final Data Cleanse</a></li>
+							    <li><a href="before" target="_blank" class="button alt">Data Profile Before Final Data Cleanse</a></li>
 						    </ul>
-                        <p>
-						    <ul class="actions">
-							    <li><a href="Collin_County_RE_Data_Analysis-After.html" class="button alt">Data Profile After Final Data Cleanse  </a></li>
-						    </ul>
-					    </p>
+
                         <div class="image fit">
 							<img src="../static/images/pandas_images/10a-numeric-population.jpg" alt="" />
                         </div>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/11-data-str-population.jpg" alt="" />
                         </div>
-                        <div class="image fit">
+                        <div class="image">
 							<img src="../static/images/pandas_images/12-column-record-counts-after.jpg" alt="" />
 						</div>
-                        <p>In addition to the profile we ran a Describe against the data frame with the snippet provided below.</p>
+                        <p><b>In addition to the profile we ran a Describe against the data frame with the snippet provided below.</b></p>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/13-describe.jpg" alt="" />
 						</div>                        
-                        <p>We replaced outlier values with the mean value for the field using the code example below for Bath Rooms.</p>
+                        <p><b>We replaced outlier values with the mean value for the field using the code example below for Bath Rooms.</b></p>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/14-outliers-populated-with-the-mean.jpg" alt="" />
 						</div>
-                        <p>After populating missing numeric and string values we ran the nissing values report again to validate that there were
-						   no longer any blank (NaN) cells in the dataset and did a .info() on the dataset.</p>
+                        <p><b>After populating missing numeric and string values we ran the nissing values report again to validate that there were
+						   no longer any blank (NaN) cells in the dataset and did a .info() on the dataset.</b></p>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/15-missing-value-ratio-after.jpg" alt="" />
 						</div>
                         <p>       </p>
-                        <div class="image fit">
+                        <div class="image">
 							<img src="../static/images/pandas_images/16-column-record-counts.jpg" alt="" />
 						</div>
-                        <p>The final steps of the data cleansing and profiling is to move the dataframe into a .csv file that will be loaded into a PostgreSQL Database
+                        <p><b>The final steps of the data cleansing and profiling is to move the dataframe into a .csv file that will be loaded into a PostgreSQL Database
 						   and create a Sample file to be used by the Machine Learning process.  The Sample file is a randomly generated file using ten percent of the
-						   original 125,000+ records.  At this time we stop the clock on the process and print out start, end and elapsed time for the process to run. </p>
+						   original 125,000+ records.  At this time we stop the clock on the process and print out start, end and elapsed time for the process to run. </b></p>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/17-final-steps.jpg" alt="" />
 						</div>
-                        <p>Connect to local database for Tableau to connect to for data extracts</p>
+						<p>
+						    <ul class="actions">
+							    <li><a href="after" target="_blank" class="button alt">Data Profile After Final Data Cleanse  </a></li>
+						    </ul>
+					    </p>
+                        <p><b>Connect to local database for Tableau to connect to for data extracts</b></p>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/18-database.jpg" alt="" />
 						</div>
-                        <p>Load real estate table. </p>
+                        <p><b>Load real estate table. </b></p>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/19-database-tables.jpg" alt="" />
 						</div>
-                        <p>Select data all records from table and do a record count.</p>
+                        <p><b>Select data all records from table and do a record count.</b></p>
                         <div class="image fit">
 							<img src="../static/images/pandas_images/20-database-tables-selects.jpg" alt="" />
 						</div>
-						<p>Those are the data details..... until Machine Learning.</p>
+						<p><b>We now have a functioning database that can be easily updated and utilized with Tableau.</b></p>
 						</div>
+						<p>
+						    <ul class="actions">
+							    <li><a href="calculator" class="button alt">Price Prediction Tool - Get Started Here</a></li>
+						    </ul>
+					    </p>
 						</article>
 						</div>
 						</section>
 
 		<!-- Footer -->
-        <section id="footer">
-            <div class="inner">
-                <div class="copyright">
+		<section id="footer">
+			<div class="inner">
+				<div class=".copyright">
 					&copy; Project Three - Team Five - SMU Bootcamp - Fall 2019 to Spring 2020
-                </div>
-            </div>
-        </section>
+					<br>
+					&copy; Untitled. Design TEMPLATED. Images Unsplash.
+				</div>
+			</div>
+		</section>
 
         <!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../static/js/jquery.min.js"></script>
+			<script src="../static/js/skel.min.js"></script>
+			<script src="../static/js/util.js"></script>
+			<script src="../static/js/main.js"></script>
 
 	</body>
 </html>

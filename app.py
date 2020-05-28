@@ -42,7 +42,15 @@ def machine():
 def tableau():
 
     return render_template("tableau.html")
+@app.route("/before")
+def before():
 
+    return render_template("Collin_County_RE_Data_Analysis-Before.html")
+
+@app.route("/after")
+def after():
+
+    return render_template("Collin_County_RE_Data_Analysis-After.html")
 
 # price prediction page with user inputs path, and function code
 @app.route("/calculator")
@@ -57,7 +65,7 @@ def calculator():
     data_unseen = pd.DataFrame([final], columns = cols)
     prediction = predict_model(model, data=data_unseen, round = 0)
     prediction = int(prediction.Label[0])
-    return render_template('calculator.html',pred='Expected closing price of the house will be ${}'.format(prediction), blah=data_unseen.to_dict())
+    return render_template('calculator.html',pred='   Predicted Sales Price of the house will be ${:,}'.format(prediction))
 
 
 if __name__ == "__main__":

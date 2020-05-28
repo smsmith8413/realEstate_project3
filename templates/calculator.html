@@ -36,7 +36,7 @@
     <!-- <link rel="stylesheet" href="/style.css"> -->
     <!-- <title>Housing Prices!</title> -->
   </head>
-  <body>
+  <!-- <body> -->
     <!--Navigation Bar-->  
     <!-- <nav class="navbar" style="background-color: #9e9992;">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -95,23 +95,26 @@
 
     <section id="calcMiddle">
       <div class="login">
-      <h1><b>Predict House Selling Price</b></h1>
+
              <!-- Form to enter new data for predictions  -->
         <form action='/calculator_predictor' method="POST">
+          <h1><b>Predict House Selling Price</b></h1>
+          <br>
           <label>Enter zip code:</label>
           <h6>Plano: 75023, 75024, 75025, 75074, 75075, 75093, 75094, 75098</h6>
           <h6>Frisco: 75033, 75034, 75035, 75071, 75072</h6>
           <h6>McKinney: 75069, 75070, 75071, 75072, 75454</h6>
           <h6>Prosper: 75071, 75078</h6>
           <h6>Fairview: 75069</h6>
+          <!-- <br> -->
           <input type="text" name="PostalCode" placeholder="Zip Code" required="required" />
           <label>Enter # of Baths</label>
           <input type="text" name="BathsTotal" placeholder="Total Baths" required="required" />
-          <label>Enter # of Baths</label>
-          <input type="text" name="BedsTotal" placeholder="Total Beds" required="required" />
           <label>Enter # of Beds</label>
+          <input type="text" name="BedsTotal" placeholder="Total Beds" required="required" />
+          <label>Enter # of Days on Market</label>
           <input type="text" name="DOM" placeholder="Expected Days On Market" required="required" />
-          <label>Enter expected Days on Market</label>
+          <label>Enter expected Days on Dining Areas</label>
           <input type="text" name="NumberOfDiningAreas" placeholder="Number Of Dining Areas" required="required" />
           <label>Enter # of Dining Areas</label>
           <input type="text" name="NumberOfLivingAreas" placeholder="Number Of Living Areas" required="required" />
@@ -129,23 +132,41 @@
           <input type="text" name="YearBuilt" placeholder="Year Built" required="required" />
     
             <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            <br>
+            <br>
+            <h4>{{pred}}</h4>
         </form>
     
-       <br></br>
-       <h5>"Based on y{{blah.PostalCode}}</h5>
-       <h4>{{pred}}</h4>
+       <br>
+       <!-- <h5><Inputs:>{blah.OriginalListPrice}</Inputs:></h5> -->
+
        
        <br>
       </div>
    </section>
     <!--Quote Just To Make It Fancy-->
     
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </body>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
+
+		<!-- Footer -->
+    <!-- <section id="footer">
+      <div class="inner">
+        <div class=".copyright">
+          &copy; Project Three - Team Five - SMU Bootcamp - Fall 2019 to Spring 2020
+          <br>
+          &copy; Untitled. Design TEMPLATED. Images Unsplash.
+        </div>
+      </div>
+    </section> -->
+		<!-- Scripts -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/skel.min.js"></script>
+    <script src="../static/js/util.js"></script>
+    <script src="../static/js/main.js"></script>
+
+    </body>
 </html>
