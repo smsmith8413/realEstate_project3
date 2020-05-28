@@ -36,32 +36,34 @@
 				<article>
 					<div class="content">
 						<header>
-							<h3>The Process</h3>
+							<h3>Machine Learning with Pycaret</h3>
 						</header>
-						<div class="image fit">
-							<img src="static/images/ml_images/compare_models.jpg" alt="" />
+						<p><b>After importing the data I quickly ran a df.info() to print a concise summary of the DataFrame to understand what information we are working with. Including the index dtype and column dtypes, non-null values and memory usage.</b></p>
+						<div class="image">
+							<img src="../static/images/ml_images/df.info.jpg" alt="" />
 						</div>
-						<p>We looked at many different criteria</p>
-						<div class="image fit">
-							<img src="images/ml_images/create_lgbm.jpg" alt="" />
+						<p><b>The PyCaret setup is the first and main step to do any kind of machine learning experiment. The target is set equal to “ClosePrice” since that is the parameter we are trying to predict. </b></p>
+						<div class="image">
+							<img src="../static/images/ml_images/setup_ClosePrice.jpg" alt="" />
 						</div>
-						<p>Here is another visual</p>
-						<div class="image fit">
-							<img src="images/ml_images/df.info.jpg" alt="" />
+						<p><b>The “compare_models()” on the caret package website lists variations of predictive analytics models that are available withing the caret framework. It starts with the best model then gradually goes down in quality of what the best model for the data would be. All these models may be prepared, tuned, fit and evaluated with a common set of caret functions.</b></p>
+						<div class="image">
+							<img src="../static/images/ml_images/compare_models.jpg" alt="" />
 						</div>
-						<p>Here is another visual</p>
-						<div class="image fit">
-							<img src="images/ml_images/imp_features.jpg" alt="" />
+						<p><b>We “plot_model()” for the top few analytic models the “compare_models()” suggested and decided to go with Light GBM.</b></p>
+						<div class="image">
+							<img src="../static/images/ml_images/create_lgbm.jpg" alt="" />
 						</div>
-						<p>Here is another visual</p>
-						<div class="image fit">
-							<img src="images/ml_images/plot_lgbm.jpg" alt="" />
+						<p><b>In this visual the select features in the dataset that contributes the most in predicting the target variable “ClosePrice” for the LightGBM model are shown. Working with selected features instead of all the features reduces the risk of over-fitting, improves accuracy, and decreases the training time.</b></p>
+						<div class="image">
+							<img src="../static/images/ml_images/imp_features.jpg" alt="" />
 						</div>
-						<p>Here is another visual</p>
-						<div class="image fit">
-							<img src="images/ml_images/setup_ClosePrice.jpg" alt="" />
+						<p><b>This is the residual plot model of LightGBM.</b></p>
+						<div class="image">
+							<img src="../static/images/ml_images/plot_lgbm.jpg" alt="" />
 						</div>
-						<p>Here is another visual</p>
+						</div>
+						<!-- <p>Here is another visual</p> -->
 						<!-- <ul class="actions">
 							<li><a href="#" class="button alt">Learn More</a></li>
 						</ul> -->

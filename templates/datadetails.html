@@ -4,7 +4,7 @@
 		<title>Data Details - SMU Bootcamp</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../statics/css/main.css" />
+		<link rel="stylesheet" href="../static/css/main.css" />
 	</head>
 	<body>
 
@@ -42,43 +42,43 @@
                         </p>
 						<p>The following Dependiences were utilized in the Pandas workbook.</p>
                         <div class="image fit">
-							<img src="images/pandas_images/1-pandas-dependencies.jpg" alt="" />
+							<img src="../static/images/pandas_images/1-pandas-dependencies.jpg" alt="" />
 						</div>
-                        <p>The base file extracted was 205,253 rows by 247 columns with many cells blank (NaN).  We also started a clock to determine runtime.</p>
+                        <p><b>The base file extracted was 205,253 rows by 247 columns with many cells blank (NaN).  We also started a clock to determine runtime.</b></p>
                         <div class="image fit">
-							<img src="images/pandas_images/2-pandas-base-file-load.jpg" alt="" />
+							<img src="../static/images/pandas_images/2-pandas-base-file-load.jpg" alt="" />
 						</div>
                         <p>Excluded columns to only those with the highest potential utilization leaving 38 columns using .iloc.</p>
                         <div class="image fit">
-							<img src="images/pandas_images/3-reduce-columns.jpg" alt="" />
+							<img src="../static/images/pandas_images/3-reduce-columns.jpg" alt="" />
 						</div> 
                         <p>Further reduced the file to be inclusive of only Collin County Postal Codes as the there were many records that had incorrect Postal Codes outside of Collin County.
                              We also reduced the number of Collin County cities to further reduce the file size for this project.  We utilized .isin to complete this cleansing step reducing the 
                              file to 135,489 rows.</p>
                         <div class="image fit">
-							<img src="images/pandas_images/4-postal-code-rows.jpg" alt="" />
+							<img src="../static/images/pandas_images/4-postal-code-rows.jpg" alt="" />
 						</div>
                         <div class="image fit">
-							<img src="images/pandas_images/5-city-rows.jpg" alt="" />
+							<img src="../static/images/pandas_images/5-city-rows.jpg" alt="" />
 						</div>
                         <p>After the data was cleansed and reduced an additional level of data profiling was initiated to determine all blank(nan) cells.  Below is the code, 
                             resulting missing ratio table and Bar chart.</p>
                         <div class="image fit">
-							<img src="images/pandas_images/6-data-profiling-nan-ratio.jpg" alt="" />
+							<img src="../static/images/pandas_images/6-data-profiling-nan-ratio.jpg" alt="" />
 						</div>
                         <div class="image fit">
-							<img src="images/pandas_images/7-missing-ratio-table.jpg" alt="" />
+							<img src="../static/images/pandas_images/7-missing-ratio-table.jpg" alt="" />
 						</div>
                         <div class="image fit">
-							<img src="images/pandas_images/8-missing-ratio-bar.jpg" alt="" />
+							<img src="../static/images/pandas_images/8-missing-ratio-bar.jpg" alt="" />
 						</div>
                         <div class="image fit">
-							<img src="images/pandas_images/9-column-record-counts.jpg" alt="" />
+							<img src="../static/images/pandas_images/9-column-record-counts.jpg" alt="" />
 						</div>
                         <p>Additional data profiling was run via ProfileReport and missing numeric cells were populated using interpolate function
                            with string cells being populated with .fillna or .replace functions.</p>
                         <div class="image fit">
-							<img src="images/pandas_images/10-data-profile.jpg" alt="" />
+							<img src="../static/images/pandas_images/10-data-profile.jpg" alt="" />
                         </div>
 						    <ul class="actions">
 							    <li><a href="Collin_County_RE_Data_Analysis-Before.html" class="button alt">Data Profile Before Final Data Cleanse</a></li>
@@ -89,51 +89,54 @@
 						    </ul>
 					    </p>
                         <div class="image fit">
-							<img src="images/pandas_images/10a-numeric-population.jpg" alt="" />
+							<img src="../static/images/pandas_images/10a-numeric-population.jpg" alt="" />
                         </div>
                         <div class="image fit">
-							<img src="images/pandas_images/11-data-str-population.jpg" alt="" />
+							<img src="../static/images/pandas_images/11-data-str-population.jpg" alt="" />
                         </div>
                         <div class="image fit">
-							<img src="images/pandas_images/12-column-record-counts-after.jpg" alt="" />
+							<img src="../static/images/pandas_images/12-column-record-counts-after.jpg" alt="" />
 						</div>
                         <p>In addition to the profile we ran a Describe against the data frame with the snippet provided below.</p>
                         <div class="image fit">
-							<img src="images/pandas_images/13-describe.jpg" alt="" />
+							<img src="../static/images/pandas_images/13-describe.jpg" alt="" />
 						</div>                        
                         <p>We replaced outlier values with the mean value for the field using the code example below for Bath Rooms.</p>
                         <div class="image fit">
-							<img src="images/pandas_images/14-outliers-populated-with-the-mean.jpg" alt="" />
+							<img src="../static/images/pandas_images/14-outliers-populated-with-the-mean.jpg" alt="" />
 						</div>
                         <p>After populating missing numeric and string values we ran the nissing values report again to validate that there were
 						   no longer any blank (NaN) cells in the dataset and did a .info() on the dataset.</p>
                         <div class="image fit">
-							<img src="images/pandas_images/15-missing-value-ratio-after.jpg" alt="" />
+							<img src="../static/images/pandas_images/15-missing-value-ratio-after.jpg" alt="" />
 						</div>
                         <p>       </p>
                         <div class="image fit">
-							<img src="images/pandas_images/16-column-record-counts.jpg" alt="" />
+							<img src="../static/images/pandas_images/16-column-record-counts.jpg" alt="" />
 						</div>
                         <p>The final steps of the data cleansing and profiling is to move the dataframe into a .csv file that will be loaded into a PostgreSQL Database
 						   and create a Sample file to be used by the Machine Learning process.  The Sample file is a randomly generated file using ten percent of the
 						   original 125,000+ records.  At this time we stop the clock on the process and print out start, end and elapsed time for the process to run. </p>
                         <div class="image fit">
-							<img src="images/pandas_images/17-final-steps.jpg" alt="" />
+							<img src="../static/images/pandas_images/17-final-steps.jpg" alt="" />
 						</div>
                         <p>Connect to local database for Tableau to connect to for data extracts</p>
                         <div class="image fit">
-							<img src="images/pandas_images/18-database.jpg" alt="" />
+							<img src="../static/images/pandas_images/18-database.jpg" alt="" />
 						</div>
                         <p>Load real estate table. </p>
                         <div class="image fit">
-							<img src="images/pandas_images/19-database-tables.jpg" alt="" />
+							<img src="../static/images/pandas_images/19-database-tables.jpg" alt="" />
 						</div>
                         <p>Select data all records from table and do a record count.</p>
                         <div class="image fit">
-							<img src="images/pandas_images/20-database-tables-selects.jpg" alt="" />
+							<img src="../static/images/pandas_images/20-database-tables-selects.jpg" alt="" />
 						</div>
 						<p>Those are the data details..... until Machine Learning.</p>
-
+						</div>
+						</article>
+						</div>
+						</section>
 
 		<!-- Footer -->
         <section id="footer">
